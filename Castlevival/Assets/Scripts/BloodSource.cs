@@ -12,7 +12,12 @@ public class BloodSource : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (amount == 0) {
+			Destroy(gameObject.GetComponent("Rat"));
+			Destroy(gameObject.collider);
+			Destroy(gameObject, 2f);
+			Destroy(this);
+		}
 	}
 	
 	public float Drain() {
