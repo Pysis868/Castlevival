@@ -315,7 +315,12 @@ function Update() {
 	
 	// Move the controller
 	var controller : CharacterController = GetComponent(CharacterController);
-	collisionFlags = controller.Move(movement);
+	if(controller.enabled) {
+		collisionFlags = controller.Move(movement);
+	} else {
+		collisionFlags = CollisionFlags.None;
+	}
+	
 	
 	// ANIMATION sector
 	if(_animation) {

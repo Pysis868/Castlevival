@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{0CE6D47F-B91F-D313-B6DC-249FE0419486}</ProjectGuid>
+	<ProjectGuid>{6505B6B1-FEF1-003C-448E-6A2AEA791D74}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-UnityScript</AssemblyName>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,10 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Camera Scripts\MouseOrbit.js" />
-     <Compile Include="Assets\Scripts\Camera Scripts\SmoothFollow.js" />
-     <Compile Include="Assets\Scripts\Camera Scripts\SmoothLookAt.js" />
-     <Compile Include="Assets\Scripts\General Scripts\DragRigidbody.js" />
+     <Compile Include="Assets\Scripts\Blood.cs" />
+     <Compile Include="Assets\Scripts\BloodSource.cs" />
+     <Compile Include="Assets\Scripts\General Scripts\ActivateTrigger.cs" />
+     <Compile Include="Assets\Scripts\Vampire.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
