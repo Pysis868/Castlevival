@@ -1,13 +1,31 @@
-Castlevival/Temp
-Castlevival/Library/metadata
-*.meta
-Castlevival/Library/CurrentLayout.dwlt
-Castlevival/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
-Castlevival/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll.mdb
-Castlevival/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll
-Castlevival/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll.mdb
-Castlevival/Library/ScriptMapper
-Castlevival/Library/assetDatabase3
-Castlevival/Library/expandedItems
-Castlevival/Library/guidmapper
-Castlevival/Library/shadercompiler-1.log
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
