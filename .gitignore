@@ -1,20 +1,20 @@
 # =============== #
 # Unity generated #
 # =============== #
-Temp/
-Library/
+Castlevival/Temp/
+Castlevival/Library/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-ExportedObj/
-obj/
+Castlevival/ExportedObj/
+Castlevival/obj/
 *.svd
 *.userprefs
-/*.csproj
+Castlevival/*.csproj
 *.pidb
 *.suo
-/*.sln
+Castlevival/*.sln
 *.user
 *.unityproj
 *.booproj
