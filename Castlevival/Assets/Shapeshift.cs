@@ -7,6 +7,7 @@ public class Shapeshift : MonoBehaviour {
 	public SkinnedMeshRenderer defaultModel;
 	public MeshRenderer newModel;
 	public bool shifted = false;
+	public AudioSource transformSFX;
 	private Blood blood;
 	
 	// Use this for initialization
@@ -31,7 +32,7 @@ public class Shapeshift : MonoBehaviour {
 				newModel.enabled = false;
 				defaultModel.enabled = true;
 			}
-			
+			transformSFX.Play ();
 		}
 	}
 }

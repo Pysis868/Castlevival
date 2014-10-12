@@ -73,7 +73,10 @@ public class Patrol : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter(Collision col) {
-		if(col.collider.gameObject.CompareTag ("Player")) {
+		if(!playerForm.shifted && col.gameObject.CompareTag ("Player")) {
+			Kill();
+			Debug.Log (col.gameObject.name);
+		} else if(col.collider.gameObject.CompareTag ("Player")) {
 			isIdle = true;
 		}
 	}
@@ -100,5 +103,10 @@ public class Patrol : MonoBehaviour {
 		{
 			isIdle = true;
 		}
+	}
+	
+	void Kill() {
+		Controller.blood = 75;
+		Application.LoadLevel ("Floor 1");
 	}
 }

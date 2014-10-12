@@ -11,6 +11,7 @@ public class Vampire : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		blood = gameObject.GetComponent<Blood>() as Blood;
+		hasStake = Controller.hasStake;
 	}
 	
 	// Update is called once per frame
@@ -27,9 +28,15 @@ public class Vampire : MonoBehaviour {
 		//Find out what we'll hit with a capsule cast (basically a fat raycast)
 		if(Physics.CapsuleCast (transform.position - new Vector3(0,.5f, 0), transform.position + new Vector3(0,.5f,0), 0.5f, transform.forward, out hitInfo, jumpDistance * blood.Proportion ())) {
 			//Jump at it if its a target and not, say, a wall
-			if(hitInfo.collider.gameObject.CompareTag ("Victim")) {
-				JumpAt(hitInfo.collider.gameObject);
-			}
+			GameObject hitObject = hitInfo.collider.gameObject;
+			if(hitObject.CompareTag ("Victim")) {
+				JumpAt(hitObject);
+			} else if (hitObject.CompareTag ("Stake")) {
+				Destroy(hitObject);
+				Controller cont = GameObject.FindGameObjectWithTag ("Controller").GetComponent ("Controller") as Controller;
+				cont.PickUpStake();
+				hasStake = true;
+			} 
 		}
 	}
 	
@@ -49,6 +56,10 @@ public class Vampire : MonoBehaviour {
 		BloodSource targetBlood = victim.GetComponent<BloodSource>() as BloodSource;
 		if(targetBlood) {
 			blood.Add(targetBlood.Drain());
+		} else if (hasStake) {
+			Controller cont = GameObject.FindGameObjectWithTag ("Controller").GetComponent ("Controller") as Controller;
+			cont.Win();
+			Application.LoadLevel ("Win");
 		}
 		
 	}

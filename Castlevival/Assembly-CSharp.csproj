@@ -46,8 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ChangeScene.cs" />
+     <Compile Include="Assets\Controller.cs" />
+     <Compile Include="Assets\Epilogue.cs" />
+     <Compile Include="Assets\Prologue.cs" />
      <Compile Include="Assets\Scripts\Blood.cs" />
      <Compile Include="Assets\Scripts\BloodSource.cs" />
+     <Compile Include="Assets\Scripts\EnemyVampire.cs" />
      <Compile Include="Assets\Scripts\General Scripts\ActivateTrigger.cs" />
      <Compile Include="Assets\Scripts\MoveWander.cs" />
      <Compile Include="Assets\Scripts\Patrol.cs" />
@@ -56,6 +61,7 @@
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Models\BloodMageJonas\HairShader.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\SkeletonData\animations.txt" />

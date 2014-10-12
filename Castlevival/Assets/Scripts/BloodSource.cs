@@ -23,6 +23,7 @@ public class BloodSource : MonoBehaviour {
 	public float Drain() {
 		float drainedAmount = amount;
 		amount = 0;
+		audio.Play ();
 		return drainedAmount;
 	}
 }
