@@ -2,6 +2,8 @@
 // Require a character controller to be attached to the same game object
 @script RequireComponent(CharacterController)
 
+public var shifted : int = 0;
+
 public var idleAnimation : AnimationClip;
 public var walkAnimation : AnimationClip;
 public var runAnimation : AnimationClip;
@@ -287,6 +289,20 @@ function DidJump ()
 }
 
 function Update() {
+	
+	if(Input.GetKeyDown(KeyCode.F)) {
+		if(shifted == 0) {
+			shifted = 1;
+			walkSpeed /= 2;
+			trotSpeed /= 2;
+			runSpeed /= 2;
+		} else {
+			shifted = 0;
+			walkSpeed *= 2;
+			trotSpeed *= 2;
+			runSpeed *= 2;
+		}
+	}
 	
 	if (!isControllable)
 	{

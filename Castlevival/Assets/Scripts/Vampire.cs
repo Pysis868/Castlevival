@@ -5,7 +5,7 @@ using System.Collections;
 public class Vampire : MonoBehaviour {
 
 	public float jumpDistance = 3;
-	
+	public bool hasStake = false;
 	private Blood blood;
 
 	// Use this for initialization

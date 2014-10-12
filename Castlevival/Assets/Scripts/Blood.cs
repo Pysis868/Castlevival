@@ -19,7 +19,7 @@ public class Blood : MonoBehaviour {
 			currentBlood -= lossRate;
 		}
 		
-		visionLight.spotAngle = 80 * (currentBlood / maxBlood);
+		visionLight.spotAngle = 80 * (currentBlood / maxBlood) + (.75f * (maxBlood - currentBlood)/maxBlood);
 		visionLight.color = Color.Lerp(Color.red, Color.white, (currentBlood / maxBlood) - (.75f * (maxBlood - currentBlood)/maxBlood) );
 	}
 	
